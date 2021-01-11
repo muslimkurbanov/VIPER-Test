@@ -7,25 +7,41 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		6F7D841333904A83109A2789 /* Pods_VIPERtestProject.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BD9042D9E6AB8554669EAB05 /* Pods_VIPERtestProject.framework */; };
 		8410E38425ACA84200FF378B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8410E38325ACA84200FF378B /* AppDelegate.swift */; };
 		8410E38625ACA84200FF378B /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8410E38525ACA84200FF378B /* SceneDelegate.swift */; };
-		8410E38825ACA84200FF378B /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8410E38725ACA84200FF378B /* ViewController.swift */; };
+		8410E38825ACA84200FF378B /* GalleryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8410E38725ACA84200FF378B /* GalleryViewController.swift */; };
 		8410E38B25ACA84200FF378B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8410E38925ACA84200FF378B /* Main.storyboard */; };
 		8410E38E25ACA84200FF378B /* VIPERtestProject.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 8410E38C25ACA84200FF378B /* VIPERtestProject.xcdatamodeld */; };
 		8410E39025ACA84300FF378B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8410E38F25ACA84300FF378B /* Assets.xcassets */; };
 		8410E39325ACA84300FF378B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8410E39125ACA84300FF378B /* LaunchScreen.storyboard */; };
+		8410E3A025ACA89700FF378B /* GalleryPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8410E39F25ACA89700FF378B /* GalleryPresenter.swift */; };
+		8410E3A325ACA8AD00FF378B /* GalleryRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8410E3A225ACA8AC00FF378B /* GalleryRouter.swift */; };
+		8410E3A625ACA8C000FF378B /* GalleryInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8410E3A525ACA8C000FF378B /* GalleryInteractor.swift */; };
+		8410E3A925ACA8D100FF378B /* GalleryEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8410E3A825ACA8D100FF378B /* GalleryEntity.swift */; };
+		8410E3AC25ACAE4700FF378B /* GalleryProtocols.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8410E3AB25ACAE4700FF378B /* GalleryProtocols.swift */; };
+		8410E3BB25ACAFB800FF378B /* GalleryNetworkService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8410E3BA25ACAFB800FF378B /* GalleryNetworkService.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		7C6BCB65435DB7A4F911B9AF /* Pods-VIPERtestProject.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-VIPERtestProject.release.xcconfig"; path = "Target Support Files/Pods-VIPERtestProject/Pods-VIPERtestProject.release.xcconfig"; sourceTree = "<group>"; };
 		8410E38025ACA84200FF378B /* VIPERtestProject.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = VIPERtestProject.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		8410E38325ACA84200FF378B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		8410E38525ACA84200FF378B /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		8410E38725ACA84200FF378B /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		8410E38725ACA84200FF378B /* GalleryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GalleryViewController.swift; sourceTree = "<group>"; };
 		8410E38A25ACA84200FF378B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		8410E38D25ACA84200FF378B /* VIPERtestProject.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = VIPERtestProject.xcdatamodel; sourceTree = "<group>"; };
 		8410E38F25ACA84300FF378B /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		8410E39225ACA84300FF378B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		8410E39425ACA84300FF378B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		8410E39F25ACA89700FF378B /* GalleryPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GalleryPresenter.swift; sourceTree = "<group>"; };
+		8410E3A225ACA8AC00FF378B /* GalleryRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GalleryRouter.swift; sourceTree = "<group>"; };
+		8410E3A525ACA8C000FF378B /* GalleryInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GalleryInteractor.swift; sourceTree = "<group>"; };
+		8410E3A825ACA8D100FF378B /* GalleryEntity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GalleryEntity.swift; sourceTree = "<group>"; };
+		8410E3AB25ACAE4700FF378B /* GalleryProtocols.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GalleryProtocols.swift; sourceTree = "<group>"; };
+		8410E3BA25ACAFB800FF378B /* GalleryNetworkService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GalleryNetworkService.swift; sourceTree = "<group>"; };
+		BD9042D9E6AB8554669EAB05 /* Pods_VIPERtestProject.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_VIPERtestProject.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		D9206B43537BAD5F1C59B394 /* Pods-VIPERtestProject.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-VIPERtestProject.debug.xcconfig"; path = "Target Support Files/Pods-VIPERtestProject/Pods-VIPERtestProject.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -33,6 +49,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				6F7D841333904A83109A2789 /* Pods_VIPERtestProject.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -44,6 +61,8 @@
 			children = (
 				8410E38225ACA84200FF378B /* VIPERtestProject */,
 				8410E38125ACA84200FF378B /* Products */,
+				FB301E47C5300D4CA633768C /* Pods */,
+				C428829B740A1F5C88E1CF58 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -60,7 +79,7 @@
 			children = (
 				8410E38325ACA84200FF378B /* AppDelegate.swift */,
 				8410E38525ACA84200FF378B /* SceneDelegate.swift */,
-				8410E38725ACA84200FF378B /* ViewController.swift */,
+				8410E39B25ACA84D00FF378B /* GalleryModule */,
 				8410E38925ACA84200FF378B /* Main.storyboard */,
 				8410E38F25ACA84300FF378B /* Assets.xcassets */,
 				8410E39125ACA84300FF378B /* LaunchScreen.storyboard */,
@@ -70,6 +89,94 @@
 			path = VIPERtestProject;
 			sourceTree = "<group>";
 		};
+		8410E39B25ACA84D00FF378B /* GalleryModule */ = {
+			isa = PBXGroup;
+			children = (
+				8410E39D25ACA85A00FF378B /* View */,
+				8410E3AE25ACAE5D00FF378B /* Presenter */,
+				8410E3B025ACAE6A00FF378B /* Router */,
+				8410E3B225ACAE7200FF378B /* Interactor */,
+				8410E3B425ACAE7B00FF378B /* Entity */,
+				8410E3B625ACAE8000FF378B /* Protocols */,
+				8410E3BD25ACAFC000FF378B /* Networking */,
+			);
+			path = GalleryModule;
+			sourceTree = "<group>";
+		};
+		8410E39D25ACA85A00FF378B /* View */ = {
+			isa = PBXGroup;
+			children = (
+				8410E38725ACA84200FF378B /* GalleryViewController.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		8410E3AE25ACAE5D00FF378B /* Presenter */ = {
+			isa = PBXGroup;
+			children = (
+				8410E39F25ACA89700FF378B /* GalleryPresenter.swift */,
+			);
+			path = Presenter;
+			sourceTree = "<group>";
+		};
+		8410E3B025ACAE6A00FF378B /* Router */ = {
+			isa = PBXGroup;
+			children = (
+				8410E3A225ACA8AC00FF378B /* GalleryRouter.swift */,
+			);
+			path = Router;
+			sourceTree = "<group>";
+		};
+		8410E3B225ACAE7200FF378B /* Interactor */ = {
+			isa = PBXGroup;
+			children = (
+				8410E3A525ACA8C000FF378B /* GalleryInteractor.swift */,
+			);
+			path = Interactor;
+			sourceTree = "<group>";
+		};
+		8410E3B425ACAE7B00FF378B /* Entity */ = {
+			isa = PBXGroup;
+			children = (
+				8410E3A825ACA8D100FF378B /* GalleryEntity.swift */,
+			);
+			path = Entity;
+			sourceTree = "<group>";
+		};
+		8410E3B625ACAE8000FF378B /* Protocols */ = {
+			isa = PBXGroup;
+			children = (
+				8410E3AB25ACAE4700FF378B /* GalleryProtocols.swift */,
+			);
+			path = Protocols;
+			sourceTree = "<group>";
+		};
+		8410E3BD25ACAFC000FF378B /* Networking */ = {
+			isa = PBXGroup;
+			children = (
+				8410E3BA25ACAFB800FF378B /* GalleryNetworkService.swift */,
+			);
+			path = Networking;
+			sourceTree = "<group>";
+		};
+		C428829B740A1F5C88E1CF58 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				BD9042D9E6AB8554669EAB05 /* Pods_VIPERtestProject.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		FB301E47C5300D4CA633768C /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				D9206B43537BAD5F1C59B394 /* Pods-VIPERtestProject.debug.xcconfig */,
+				7C6BCB65435DB7A4F911B9AF /* Pods-VIPERtestProject.release.xcconfig */,
+			);
+			name = Pods;
+			path = Pods;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -77,9 +184,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 8410E39725ACA84300FF378B /* Build configuration list for PBXNativeTarget "VIPERtestProject" */;
 			buildPhases = (
+				7350D39A65F6982C5793CF94 /* [CP] Check Pods Manifest.lock */,
 				8410E37C25ACA84200FF378B /* Sources */,
 				8410E37D25ACA84200FF378B /* Frameworks */,
 				8410E37E25ACA84200FF378B /* Resources */,
+				2AAAD2C2798DEAB9013BEA8C /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -135,13 +244,61 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		2AAAD2C2798DEAB9013BEA8C /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-VIPERtestProject/Pods-VIPERtestProject-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-VIPERtestProject/Pods-VIPERtestProject-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-VIPERtestProject/Pods-VIPERtestProject-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		7350D39A65F6982C5793CF94 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-VIPERtestProject-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		8410E37C25ACA84200FF378B /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				8410E38825ACA84200FF378B /* ViewController.swift in Sources */,
+				8410E3A625ACA8C000FF378B /* GalleryInteractor.swift in Sources */,
+				8410E38825ACA84200FF378B /* GalleryViewController.swift in Sources */,
+				8410E3A025ACA89700FF378B /* GalleryPresenter.swift in Sources */,
+				8410E3A925ACA8D100FF378B /* GalleryEntity.swift in Sources */,
 				8410E38425ACA84200FF378B /* AppDelegate.swift in Sources */,
+				8410E3BB25ACAFB800FF378B /* GalleryNetworkService.swift in Sources */,
+				8410E3A325ACA8AD00FF378B /* GalleryRouter.swift in Sources */,
+				8410E3AC25ACAE4700FF378B /* GalleryProtocols.swift in Sources */,
 				8410E38E25ACA84200FF378B /* VIPERtestProject.xcdatamodeld in Sources */,
 				8410E38625ACA84200FF378B /* SceneDelegate.swift in Sources */,
 			);
@@ -287,6 +444,7 @@
 		};
 		8410E39825ACA84300FF378B /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = D9206B43537BAD5F1C59B394 /* Pods-VIPERtestProject.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -306,6 +464,7 @@
 		};
 		8410E39925ACA84300FF378B /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 7C6BCB65435DB7A4F911B9AF /* Pods-VIPERtestProject.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
