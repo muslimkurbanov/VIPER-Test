@@ -8,48 +8,51 @@
 import Foundation
 import UIKit
 
-class GalleryPresenter:ViewToPresenterProtocol {
-    
-    var view: PresenterToViewProtocol?
-    
-    var interactor: PresenterToInteractorProtocol?
-    
-    var router: PresenterToRouterProtocol?
-    
-    private var searchResponce: [Images]? = nil
+protocol GalleryPresenterProtocol {
+    func showImages(_ completion: @escaping (_ cars: [ImagesViewModel]) -> Void)
+    func showImagesDetail(for viewModel: ImagesViewModel)
+}
 
+class GalleryPresenter: GalleryPresenterProtocol {
     
-    func startFetchingNotice() {
-        interactor?.fetchNotice { [weak self] (result) in
-            guard let self = self else { return }
-            
+    let interactor: GalleryInteractorProtocol
+    let view: GalleryViewController
+    let router: GalleryRouterProtocol
+    
+    init(interactor: GalleryInteractorProtocol, router: GalleryRouterProtocol, view: GalleryViewController) {
+            self.interactor = interactor
+            self.router = router
+            self.view = view
+        }
+    
+    func showImages(_ completion: @escaping (_ cars: [ImagesViewModel]) -> Void) {
+        interactor.getImages { (result) in
+            guard let result = result else {
+                completion([])
+                return
+            }
             DispatchQueue.main.async {
-                switch result {
-                case .success(let searchResponce):
-                    self.searchResponce = searchResponce
-                    self.view?.applyData(model: searchResponce!)
-                    print(searchResponce)
-                case .failure(let error):
-                    self.view?.failure(error: error)
-                }
+                completion(self.createImagesViewModels(from: result))
             }
         }
     }
     
-    func showMovieController(navigationController: UINavigationController) {
+    func showImagesDetail(for viewModel: ImagesViewModel) {
     }
-
+    
+    private func createImagesViewModels(from images: [Images]) -> [ImagesViewModel] {
+            return images.map({ (image) -> ImagesViewModel in
+                return ImagesViewModel(urls: image.urls, description: image.description)
+            })
+        }
 }
 
-extension GalleryPresenter: InteractorToPresenterProtocol{
+extension GalleryPresenter {
     
-    func noticeFetchedSuccess(noticeModelArray: [Images]) {
-        view?.applyData(model: noticeModelArray)
+    func noticeFetchedSuccess(noticeModelArray: [ImagesViewModel]) {
     }
     
     func noticeFetchFailed() {
         print("error")
     }
-    
-    
 }

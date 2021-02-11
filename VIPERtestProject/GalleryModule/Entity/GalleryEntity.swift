@@ -8,11 +8,11 @@
 import Foundation
 
 struct Images: Decodable {
-    let urls: [URLKing.RawValue:String]
+    let urls: [ImageSize.RawValue:String]
     let description: String?
     let alt_description: String?
 }
-enum URLKing: String {
+enum ImageSize: String {
     case raw
     case full
     case regular

@@ -8,33 +8,27 @@
 import Foundation
 import Alamofire
 
-class GalleryInteractor: PresenterToInteractorProtocol {
+protocol GalleryInteractorProtocol {
+    func getImages(_ completion: @escaping (_ cars: [Images]?)-> Void)
+}
+
+class GalleryInteractor: GalleryInteractorProtocol {
     
-    var presenter: InteractorToPresenterProtocol?
+    let networkService: NetworkServiceProtocol
     
-    func fetchNotice(completion: @escaping (Result<[Images]?, Error>) -> Void) {
-        let urlString = "https://api.unsplash.com/photos/?client_id=LhHtMGggUmhSDV6W9Aks2qGu55WBQUNZdFtO6jEpFSo"
-        
-        AF.request(urlString, method: .get, parameters: nil).responseJSON { (responce) in
-            switch responce.result {
-            case .failure(let error):
-                print(error)
-            case .success(let value):
-                if let arrayDictionary = value as? [[String: Any]] {
-                    do {
-                        let data = try JSONSerialization.data(withJSONObject: arrayDictionary, options: .fragmentsAllowed)
-                        print(data)
-                        let result = try JSONDecoder().decode([Images].self, from: data)
-                        completion(.success(result))
-                        print(result)
-                    } catch {
-                        completion(.failure(error))
-                        print(error)
-                    }
-                }
-                
+    init(networkService: NetworkServiceProtocol) {
+        self.networkService = networkService
+    }
+    
+    func getImages(_ completion: @escaping ([Images]?)-> Void) {
+        networkService.getImages { (result) in
+            
+            guard let result = result else {
+                completion([])
+                return
             }
-        }.resume()
+            completion(result)
+        }
     }
     
     

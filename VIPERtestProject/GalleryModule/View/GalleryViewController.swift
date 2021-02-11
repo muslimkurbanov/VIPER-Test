@@ -13,58 +13,44 @@ class GalleryViewController: UIViewController {
     
     @IBOutlet weak var collectionView: UICollectionView!
     
-    var presenter: ViewToPresenterProtocol?
-    
-//    var noticeArrayList: [Images] = []
-    
-//    var noticeArrayList:Array<Images> = Array()
-
-    var searchResponse = [Images]() {
-        didSet {
-//            galleryCollectionView.reloadData()
-        }
-    }
+    var presenter: GalleryPresenterProtocol?
+    var viewModels: [ImagesViewModel] = []
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
 //        view.backgroundColor = .blue
         self.title = "Gallery"
-        presenter?.startFetchingNotice()
+        
+        
+        presenter?.showImages { (viewModels) in
+            self.viewModels = viewModels
+            self.collectionView.reloadData()
+        }
         
         collectionView.delegate = self
         collectionView.dataSource = self
-        collectionView.backgroundColor = .blue
-        print(searchResponse.count)
     }
-
 
 }
 
 extension GalleryViewController: UICollectionViewDelegate, UICollectionViewDataSource {
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return searchResponse.count
-//        return 10
-//        return noticeArrayList.count
+        return viewModels.count
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "cell", for: indexPath) as? CollectionViewCell else { return UICollectionViewCell() }
-//        let item = noticeArrayList[indexPath.row]
-        let item = searchResponse[indexPath.row]
-////        cell.confingurate(with: item)
-        cell.imageView.sd_setImage(with: URL(string: item.urls["small"] ?? ""), completed: nil)
-        cell.label.text = item.description
-        cell.backgroundColor = .red
+        let viewModel = viewModels[indexPath.row]
+        cell.imageView.sd_setImage(with: URL(string: viewModel.urls["small"] ?? ""), completed: nil)
+        cell.label.text = viewModel.description ?? "No name"
         return cell
     }
     
     
 }
 
-extension GalleryViewController: PresenterToViewProtocol {
+extension GalleryViewController {
     func showNotice(noticeArray: [Images]) {
-        self.searchResponse = noticeArray
         self.collectionView.reloadData()
     }
     
@@ -77,7 +63,7 @@ extension GalleryViewController: PresenterToViewProtocol {
 //    }
     
     func applyData(model: [Images]) {
-        searchResponse.append(contentsOf: model)
+//        searchResponse.append(contentsOf: model)
 
     }
     
