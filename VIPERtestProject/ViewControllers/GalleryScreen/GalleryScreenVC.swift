@@ -1,5 +1,5 @@
 //
-//  GalleryViewScreen.swift
+//  GalleryScreenVC.swift
 //  VIPERtestProject
 //
 //  Created by Муслим Курбанов on 11.01.2021.
@@ -52,7 +52,7 @@ extension GalleryScreenVC: UICollectionViewDataSource {
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "cell", for: indexPath) as? CollectionViewCell else { return UICollectionViewCell() }
+        guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "cell", for: indexPath) as? GalleryImageCell else { return UICollectionViewCell() }
         let viewModel = viewModels[indexPath.row]
         
         cell.configurate(with: viewModel)

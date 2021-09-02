@@ -20,7 +20,7 @@ final class NetworkService: NetworkServiceProtocol {
         AF.request(urlString, method: .get, parameters: nil).responseJSON { (responce) in
             switch responce.result {
             
-            case .failure(let error):
+            case .failure(_):
                 completion([])
             case .success(let value):
                 

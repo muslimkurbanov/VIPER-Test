@@ -8,6 +8,7 @@
 import UIKit
 
 protocol GalleryRouterProtocol {
+    
     static func showGallery() -> GalleryScreenVC?
 }
 
@@ -27,7 +28,7 @@ final class GalleryRouter: GalleryRouterProtocol {
     
     static func showGallery() -> GalleryScreenVC? {
         
-        let vc = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(identifier: "MyViewController") as! GalleryScreenVC
+        let vc = UIStoryboard(name: "GalleryScreen", bundle: nil).instantiateInitialViewController() as! GalleryScreenVC
         let router = GalleryRouter(presentingViewController: vc)
         let networkService: NetworkServiceProtocol = NetworkService()
         
