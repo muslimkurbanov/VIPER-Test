@@ -11,8 +11,8 @@ struct ImagesViewModel: Decodable {
     let urls: [ImageSizeViewModel.RawValue:String]
     let description: String?
 }
+
 enum ImageSizeViewModel: String {
     case raw
     case small
 }
-

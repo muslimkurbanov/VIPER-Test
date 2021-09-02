@@ -5,23 +5,29 @@
 //  Created by Муслим Курбанов on 11.01.2021.
 //
 
-import Foundation
 import UIKit
 
 protocol GalleryRouterProtocol {
-    static func showGallery() -> GalleryViewController?
+    static func showGallery() -> GalleryScreenVC?
 }
 
-class GalleryRouter: GalleryRouterProtocol {
+final class GalleryRouter: GalleryRouterProtocol {
     
-    let presentingViewController: UIViewController
+    //MARK: - Properties
+    
+    private let presentingViewController: UIViewController
+    
+    //MARK: - Init
     
     init(presentingViewController: UIViewController) {
         self.presentingViewController = presentingViewController
     }
     
-    static func showGallery() -> GalleryViewController? {
-        let vc = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(identifier: "MyViewController") as! GalleryViewController
+    //MARK: - Functions
+    
+    static func showGallery() -> GalleryScreenVC? {
+        
+        let vc = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(identifier: "MyViewController") as! GalleryScreenVC
         let router = GalleryRouter(presentingViewController: vc)
         let networkService: NetworkServiceProtocol = NetworkService()
         

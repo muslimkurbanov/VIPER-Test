@@ -12,28 +12,30 @@ protocol NetworkServiceProtocol {
     func getImages(_ completion: @escaping (_ cars: [Images]?) -> Void)
 }
 
-class NetworkService: NetworkServiceProtocol {
+final class NetworkService: NetworkServiceProtocol {
+    
     func getImages(_ completion: @escaping (_ cars: [Images]?) -> Void) {
         let urlString = "https://api.unsplash.com/photos/?client_id=LhHtMGggUmhSDV6W9Aks2qGu55WBQUNZdFtO6jEpFSo"
         
         AF.request(urlString, method: .get, parameters: nil).responseJSON { (responce) in
             switch responce.result {
+            
             case .failure(let error):
-                print(error)
+                completion([])
             case .success(let value):
+                
                 if let arrayDictionary = value as? [[String: Any]] {
+                    
                     do {
                         let data = try JSONSerialization.data(withJSONObject: arrayDictionary, options: .fragmentsAllowed)
-                        print(data)
+                        
                         let result = try JSONDecoder().decode([Images].self, from: data)
                         completion(result)
-                        print(result)
                     } catch {
                         completion([])
-                        print(error)
                     }
                 }
             }
-        }.resume()
+        }
     }
 }

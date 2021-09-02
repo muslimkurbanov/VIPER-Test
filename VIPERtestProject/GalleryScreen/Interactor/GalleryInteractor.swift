@@ -12,7 +12,7 @@ protocol GalleryInteractorProtocol {
     func getImages(_ completion: @escaping (_ cars: [Images]?)-> Void)
 }
 
-class GalleryInteractor: GalleryInteractorProtocol {
+final class GalleryInteractor: GalleryInteractorProtocol {
     
     let networkService: NetworkServiceProtocol
     

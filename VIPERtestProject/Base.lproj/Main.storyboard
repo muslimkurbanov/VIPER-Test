@@ -9,10 +9,10 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Go To Gallery View Controller-->
+        <!--Go To Gallery ScreenVC-->
         <scene sceneID="FSX-wT-FKc">
             <objects>
-                <viewController id="8o0-m4-xU4" customClass="GoToGalleryViewController" customModule="VIPERtestProject" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="8o0-m4-xU4" customClass="GoToGalleryScreenVC" customModule="VIPERtestProject" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="0hn-Aj-cjG">
                         <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -53,10 +53,10 @@
             </objects>
             <point key="canvasLocation" x="125" y="107"/>
         </scene>
-        <!--Gallery View Controller-->
+        <!--Gallery ScreenVC-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController storyboardIdentifier="MyViewController" id="BYZ-38-t0r" customClass="GalleryViewController" customModule="VIPERtestProject" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="MyViewController" id="BYZ-38-t0r" customClass="GalleryScreenVC" customModule="VIPERtestProject" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -97,8 +97,8 @@
                                         </collectionViewCellContentView>
                                         <size key="customSize" width="182" height="300"/>
                                         <connections>
+                                            <outlet property="imageNameLabel" destination="bpg-hL-QJm" id="Ww9-kD-DQI"/>
                                             <outlet property="imageView" destination="Vlz-OZ-2jX" id="7F0-X9-Jlt"/>
-                                            <outlet property="label" destination="bpg-hL-QJm" id="Ww9-kD-DQI"/>
                                         </connections>
                                     </collectionViewCell>
                                 </cells>
