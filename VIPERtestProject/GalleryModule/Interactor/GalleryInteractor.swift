@@ -30,6 +30,4 @@ class GalleryInteractor: GalleryInteractorProtocol {
             completion(result)
         }
     }
-    
-    
 }

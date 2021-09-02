@@ -33,7 +33,6 @@ class NetworkService: NetworkServiceProtocol {
                         print(error)
                     }
                 }
-                
             }
         }.resume()
     }

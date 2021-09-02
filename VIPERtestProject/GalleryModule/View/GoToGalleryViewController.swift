@@ -8,11 +8,6 @@
 import UIKit
 
 class GoToGalleryViewController: UIViewController {
-
-    override func viewDidLoad() {
-        super.viewDidLoad()
-
-    }
     
     @IBAction func goToGallery(_ sender: Any) {
         guard let gallery = GalleryRouter.showGallery() else { return }

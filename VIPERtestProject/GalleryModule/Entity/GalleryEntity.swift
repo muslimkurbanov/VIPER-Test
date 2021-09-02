@@ -19,4 +19,3 @@ enum ImageSize: String {
     case small
     case thumb
 }
-

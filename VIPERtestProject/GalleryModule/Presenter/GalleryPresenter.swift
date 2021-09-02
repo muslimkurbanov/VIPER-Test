@@ -33,6 +33,7 @@ class GalleryPresenter: GalleryPresenterProtocol {
             }
             DispatchQueue.main.async {
                 completion(self.createImagesViewModels(from: result))
+                self.view.success()
             }
         }
     }
@@ -41,10 +42,10 @@ class GalleryPresenter: GalleryPresenterProtocol {
     }
     
     private func createImagesViewModels(from images: [Images]) -> [ImagesViewModel] {
-            return images.map({ (image) -> ImagesViewModel in
-                return ImagesViewModel(urls: image.urls, description: image.description)
-            })
-        }
+        return images.map({ (image) -> ImagesViewModel in
+            return ImagesViewModel(urls: image.urls, description: image.description)
+        })
+    }
 }
 
 extension GalleryPresenter {

@@ -10,17 +10,17 @@ import SDWebImage
 
 class GalleryViewController: UIViewController {
 
-    
     @IBOutlet weak var collectionView: UICollectionView!
+    @IBOutlet weak var activityIndicator: UIActivityIndicatorView!
+
     
     var presenter: GalleryPresenterProtocol?
     var viewModels: [ImagesViewModel] = []
     
     override func viewDidLoad() {
         super.viewDidLoad()
-//        view.backgroundColor = .blue
-        self.title = "Gallery"
-        
+        //        view.backgroundColor = .blue
+        self.title = "Галлерея"
         
         presenter?.showImages { (viewModels) in
             self.viewModels = viewModels
@@ -30,7 +30,6 @@ class GalleryViewController: UIViewController {
         collectionView.delegate = self
         collectionView.dataSource = self
     }
-
 }
 
 extension GalleryViewController: UICollectionViewDelegate, UICollectionViewDataSource {
@@ -45,11 +44,13 @@ extension GalleryViewController: UICollectionViewDelegate, UICollectionViewDataS
         cell.label.text = viewModel.description ?? "No name"
         return cell
     }
-    
-    
 }
 
 extension GalleryViewController {
+    
+    func success() {
+        activityIndicator.stopAnimating()
+    }
     func showNotice(noticeArray: [Images]) {
         self.collectionView.reloadData()
     }
@@ -71,8 +72,6 @@ extension GalleryViewController {
         print("error")
 
     }
-    
-    
 }
     
 class CollectionViewCell: UICollectionViewCell {
